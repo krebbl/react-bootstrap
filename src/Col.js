@@ -187,16 +187,16 @@ class Col extends React.Component {
         const propValue = elementProps[propName];
 
         if (propValue != null) {
-          classes.push(prefix(bsProps, `${size}${modifier}-${propValue}`));
+          classes.push(`${modifier}-${size}-${propValue}`);
         }
 
         delete elementProps[propName];
       }
 
-      popProp('', '');
-      popProp('Offset', '-offset');
-      popProp('Push', '-push');
-      popProp('Pull', '-pull');
+      popProp('', 'col');
+      popProp('Offset', 'offset');
+      popProp('Push', 'push');
+      popProp('Pull', 'pull');
 
       const hiddenPropName = `${size}Hidden`;
       if (elementProps[hiddenPropName]) {

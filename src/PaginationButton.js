@@ -60,11 +60,13 @@ class PaginationButton extends React.Component {
       delete props.eventKey;
     }
 
+    props.className = classNames(props.className , 'page-link');
+
     delete props.onSelect;
 
     return (
       <li
-        className={classNames(className, { active, disabled })}
+        className={classNames(className, { active, disabled }, 'page-item')}
         style={style}
       >
         <Component

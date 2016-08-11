@@ -58,8 +58,8 @@ describe('<FormGroup>', () => {
       className: 'has-warning',
     },
     {
-      props: { validationState: 'error' },
-      className: 'has-error',
+      props: { validationState: 'danger' },
+      className: 'has-danger',
     },
     {
       props: { className: 'custom-group' },

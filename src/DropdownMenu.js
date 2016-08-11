@@ -105,7 +105,7 @@ class DropdownMenu extends React.Component {
     };
 
     const list = (
-      <ul
+      <div
         {...elementProps}
         role="menu"
         className={classNames(className, classes)}
@@ -119,7 +119,7 @@ class DropdownMenu extends React.Component {
             onSelect: createChainedFunction(child.props.onSelect, onSelect),
           })
         ))}
-      </ul>
+      </div>
     );
 
     if (open) {

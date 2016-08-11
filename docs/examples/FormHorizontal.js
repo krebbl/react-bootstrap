@@ -1,6 +1,6 @@
 const formInstance = (
-  <Form horizontal>
-    <FormGroup controlId="formHorizontalEmail">
+  <Form>
+    <FormGroup controlId="formHorizontalEmail" horizontal>
       <Col componentClass={ControlLabel} sm={2}>
         Email
       </Col>
@@ -9,7 +9,7 @@ const formInstance = (
       </Col>
     </FormGroup>
 
-    <FormGroup controlId="formHorizontalPassword">
+    <FormGroup controlId="formHorizontalPassword" horizontal>
       <Col componentClass={ControlLabel} sm={2}>
         Password
       </Col>
@@ -18,13 +18,13 @@ const formInstance = (
       </Col>
     </FormGroup>
 
-    <FormGroup>
+    <FormGroup horizontal>
       <Col smOffset={2} sm={10}>
         <Checkbox>Remember me</Checkbox>
       </Col>
     </FormGroup>
 
-    <FormGroup>
+    <FormGroup horizontal>
       <Col smOffset={2} sm={10}>
         <Button type="submit">
           Sign in

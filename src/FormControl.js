@@ -53,6 +53,10 @@ class FormControl extends React.Component {
       classes = getClassSet(bsProps);
     }
 
+    if(formGroup && formGroup.validationState) {
+      classes["form-control-" + formGroup.validationState] = true;
+    }
+
     return (
       <Component
         {...elementProps}

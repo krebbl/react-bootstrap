@@ -11,7 +11,7 @@ const propTypes = {
   /**
    * Only valid if `inline` is not set.
    */
-  validationState: React.PropTypes.oneOf(['success', 'warning', 'error']),
+  validationState: React.PropTypes.oneOf(['success', 'warning', 'danger']),
   /**
    * Attaches a ref to the `<input>` element. Only functions can be used here.
    *
@@ -69,6 +69,7 @@ class Radio extends React.Component {
       return (
         <label className={classNames(className, classes)} style={style}>
           {input}
+          {' '}
           {children}
         </label>
       );
@@ -86,6 +87,7 @@ class Radio extends React.Component {
       <div className={classNames(className, classes)} style={style}>
         <label>
           {input}
+          {' '}
           {children}
         </label>
       </div>

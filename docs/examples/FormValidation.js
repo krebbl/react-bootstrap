@@ -2,43 +2,43 @@ const formInstance = (
   <form>
     <FormGroup controlId="formValidationSuccess1" validationState="success">
       <ControlLabel>Input with success</ControlLabel>
-      <FormControl type="text" />
+      <FormControl type="text"/>
       <HelpBlock>Help text with validation state.</HelpBlock>
     </FormGroup>
 
     <FormGroup controlId="formValidationWarning1" validationState="warning">
       <ControlLabel>Input with warning</ControlLabel>
-      <FormControl type="text" />
+      <FormControl type="text"/>
     </FormGroup>
 
-    <FormGroup controlId="formValidationError1" validationState="error">
-      <ControlLabel>Input with error</ControlLabel>
-      <FormControl type="text" />
+    <FormGroup controlId="formValidationError1" validationState="danger">
+      <ControlLabel>Input with danger</ControlLabel>
+      <FormControl type="text"/>
     </FormGroup>
 
     <FormGroup controlId="formValidationSuccess2" validationState="success">
       <ControlLabel>Input with success and feedback icon</ControlLabel>
-      <FormControl type="text" />
-      <FormControl.Feedback />
+      <FormControl type="text"/>
+
     </FormGroup>
 
     <FormGroup controlId="formValidationWarning2" validationState="warning">
       <ControlLabel>Input with warning and feedback icon</ControlLabel>
-      <FormControl type="text" />
-      <FormControl.Feedback />
+      <FormControl type="text"/>
+
     </FormGroup>
 
-    <FormGroup controlId="formValidationError2" validationState="error">
-      <ControlLabel>Input with error and feedback icon</ControlLabel>
-      <FormControl type="text" />
-      <FormControl.Feedback />
+    <FormGroup controlId="formValidationError2" validationState="danger">
+      <ControlLabel>Input with danger and feedback icon</ControlLabel>
+      <FormControl type="text"/>
+
     </FormGroup>
 
     <FormGroup controlId="formValidationSuccess3" validationState="success">
       <ControlLabel>Input with success and custom feedback icon</ControlLabel>
-      <FormControl type="text" />
+      <FormControl type="text"/>
       <FormControl.Feedback>
-        <Glyphicon glyph="music" />
+        <Glyphicon glyph="music"/>
       </FormControl.Feedback>
     </FormGroup>
 
@@ -46,32 +46,32 @@ const formInstance = (
       <ControlLabel>Input group with warning</ControlLabel>
       <InputGroup>
         <InputGroup.Addon>@</InputGroup.Addon>
-        <FormControl type="text" />
+        <FormControl type="text"/>
       </InputGroup>
-      <FormControl.Feedback />
+
     </FormGroup>
 
-    <Form componentClass="fieldset" horizontal>
-      <FormGroup controlId="formValidationError3" validationState="error">
+    <Form componentClass="fieldset">
+      <FormGroup controlId="formValidationError3" validationState="danger" horizontal>
         <Col componentClass={ControlLabel} xs={3}>
-          Input with error
+          Input with danger
         </Col>
         <Col xs={9}>
-          <FormControl type="text" />
-          <FormControl.Feedback />
+          <FormControl type="text"/>
+
         </Col>
       </FormGroup>
 
-      <FormGroup controlId="formValidationSuccess4" validationState="success">
+      <FormGroup controlId="formValidationSuccess4" validationState="success" horizontal>
         <Col componentClass={ControlLabel} xs={3}>
           Input group with success
         </Col>
         <Col xs={9}>
           <InputGroup>
             <InputGroup.Addon>@</InputGroup.Addon>
-            <FormControl type="text" />
+            <FormControl type="text"/>
           </InputGroup>
-          <FormControl.Feedback />
+
         </Col>
       </FormGroup>
     </Form>
@@ -80,18 +80,18 @@ const formInstance = (
       <FormGroup controlId="formValidationWarning4" validationState="warning">
         <ControlLabel>Input with warning</ControlLabel>
         {' '}
-        <FormControl type="text" />
-        <FormControl.Feedback />
+        <FormControl type="text"/>
+
       </FormGroup>
       {' '}
-      <FormGroup controlId="formValidationError4" validationState="error">
-        <ControlLabel>Input group with error</ControlLabel>
+      <FormGroup controlId="formValidationError4" validationState="danger">
+        <ControlLabel>Input group with danger</ControlLabel>
         {' '}
         <InputGroup>
           <InputGroup.Addon>@</InputGroup.Addon>
-          <FormControl type="text" />
+          <FormControl type="text"/>
         </InputGroup>
-        <FormControl.Feedback />
+
       </FormGroup>
     </Form>
 
@@ -101,8 +101,8 @@ const formInstance = (
     <Radio validationState="warning">
       Radio with warning
     </Radio>
-    <Checkbox validationState="error">
-      Checkbox with error
+    <Checkbox validationState="danger">
+      Checkbox with danger
     </Checkbox>
 
     {/* This requires React 15's <span>-less spaces to be exactly correct. */}

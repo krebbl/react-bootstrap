@@ -32,6 +32,8 @@ class NavDropdown extends React.Component {
     const [dropdownProps, toggleProps] =
       splitComponentProps(props, Dropdown.ControlledComponent);
 
+
+    toggleProps.className = classNames(toggleProps.className, "nav-link");
     // Unlike for the other dropdowns, styling needs to go to the `<Dropdown>`
     // rather than the `<Dropdown.Toggle>`.
 
@@ -39,7 +41,7 @@ class NavDropdown extends React.Component {
       <Dropdown
         {...dropdownProps}
         componentClass="li"
-        className={classNames(className, { active })}
+        className={classNames(className, { active }, "nav-item")}
         style={style}
       >
         <Dropdown.Toggle {...toggleProps} useAnchor>

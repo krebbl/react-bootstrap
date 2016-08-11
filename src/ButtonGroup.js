@@ -32,7 +32,7 @@ const defaultProps = {
 
 class ButtonGroup extends React.Component {
   render() {
-    const { block, justified, vertical, className, ...props } = this.props;
+    const { justified, vertical, className, ...props } = this.props;
     const [bsProps, elementProps] = splitBsProps(props);
 
     const classes = {
@@ -40,9 +40,6 @@ class ButtonGroup extends React.Component {
       [prefix(bsProps)]: !vertical,
       [prefix(bsProps, 'vertical')]: vertical,
       [prefix(bsProps, 'justified')]: justified,
-
-      // this is annoying, since the class is `btn-block` not `btn-group-block`
-      [prefix(Button.defaultProps, 'block')]: block,
     };
 
     return (

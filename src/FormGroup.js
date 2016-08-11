@@ -11,7 +11,7 @@ const propTypes = {
    * Sets `id` on `<FormControl>` and `htmlFor` on `<FormGroup.Label>`.
    */
   controlId: React.PropTypes.string,
-  validationState: React.PropTypes.oneOf(['success', 'warning', 'error']),
+  validationState: React.PropTypes.oneOf(['success', 'warning', 'danger']),
 };
 
 const childContextTypes = {
@@ -38,7 +38,7 @@ class FormGroup extends React.Component {
   }
 
   render() {
-    const { validationState, className, children, ...props } = this.props;
+    const { validationState, className, children, horizontal, ...props } = this.props;
     const [bsProps, elementProps] = splitBsPropsAndOmit(props, ['controlId']);
 
     const classes = {
@@ -47,6 +47,10 @@ class FormGroup extends React.Component {
     };
     if (validationState) {
       classes[`has-${validationState}`] = true;
+    }
+
+    if(horizontal) {
+      classes["row"] = true;
     }
 
     return (

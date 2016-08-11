@@ -110,39 +110,34 @@ class MenuItem extends React.Component {
       elementProps.children = undefined;
 
       return (
-        <li
-          {...elementProps}
+        <div
           role="separator"
-          className={classNames(className, 'divider')}
+          className={classNames(className, prefix(bsProps, 'divider'))}
           style={style}
-        />
+          {...elementProps}
+        ></div>
       );
     }
 
     if (header) {
       return (
-        <li
-          {...elementProps}
+        <div
           role="heading"
           className={classNames(className, prefix(bsProps, 'header'))}
           style={style}
+          {...elementProps}
         />
       );
     }
 
     return (
-      <li
-        role="presentation"
-        className={classNames(className, { active, disabled })}
-        style={style}
-      >
         <SafeAnchor
           {...elementProps}
+          className={classNames(className, { active, disabled }, prefix(bsProps, 'item'))}
+          style={style}
           role="menuitem"
-          tabIndex="-1"
           onClick={createChainedFunction(onClick, this.handleClick)}
         />
-      </li>
     );
   }
 }

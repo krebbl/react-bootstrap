@@ -55,10 +55,12 @@ class NavItem extends React.Component {
       props['aria-selected'] = active;
     }
 
+    props.className = classNames(props.className || "", {active, disabled}, "nav-link");
+
     return (
       <li
         role="presentation"
-        className={classNames(className, { active, disabled })}
+        className={classNames(className, "nav-item")}
         style={style}
       >
         <SafeAnchor

@@ -38,6 +38,10 @@ class ControlLabel extends React.Component {
       'sr-only': srOnly,
     };
 
+    if(className && className.indexOf("col") > -1) {
+      classes["col-form-label"] = true;
+    }
+
     return (
       <label
         {...elementProps}

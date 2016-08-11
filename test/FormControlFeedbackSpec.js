@@ -27,12 +27,12 @@ describe('<FormControl.Feedback>', () => {
 
   it('should render default error', () => {
     $(
-      <FormGroup validationState="error">
+      <FormGroup validationState="danger">
         <FormControl.Feedback />
       </FormGroup>
     )
       .render()
-      .single('.form-control-feedback.glyphicon-remove');
+      .single('.form-control-danger');
   });
 
   it('should render default validation state', () => {
@@ -44,7 +44,7 @@ describe('<FormControl.Feedback>', () => {
       </FormGroup>
     )
       .render()
-      .single('.form-control-feedback.glyphicon-ok');
+      .single('.form-control-success');
   });
 
   it('should render custom component', () => {

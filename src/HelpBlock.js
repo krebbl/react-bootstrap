@@ -19,4 +19,4 @@ class HelpBlock extends React.Component {
   }
 }
 
-export default bsClass('help-block', HelpBlock);
+export default bsClass('form-text', HelpBlock);

@@ -17,7 +17,7 @@ class FormControlFeedback extends React.Component {
     switch (validationState) {
       case 'success': return 'ok';
       case 'warning': return 'warning-sign';
-      case 'error': return 'remove';
+      case 'danger': return 'remove';
       default: return null;
     }
   }
